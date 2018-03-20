@@ -1,6 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-
+import React from 'react';
 import { findDOMNode } from 'react-dom';
 
 class Slot extends React.Component {
@@ -22,13 +21,13 @@ class Slot extends React.Component {
 
     if ($target == null) return;
 
-    console.log(this.props.target, $target);
+    // console.log(this.props.target, $target);
 
     const fullScroll = findDOMNode(this.targetRefs[this.targetRefs.length - 1]).offsetTop;
     const targetOffset = $target.offsetTop;
 
     const totalScroll = targetOffset + fullScroll * (this.props.times - 1);
-    console.log(totalScroll, targetOffset, fullScroll);
+    // console.log(totalScroll, targetOffset, fullScroll);
 
     const startTime = Date.now();
 
